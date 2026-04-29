@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_music/feature/image_video/image_page.dart';
 import 'package:get/get.dart';
 
 import '../../core/models/position_data.dart';
@@ -16,6 +17,7 @@ class PlayerPage extends GetView<PlayerController> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            ImagePage(),
             ControlButtons(controller.player),
             StreamBuilder<PositionData>(
               stream: controller.positionDataStream,
